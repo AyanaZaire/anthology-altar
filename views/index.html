@@ -1,6 +1,73 @@
-<h1>Hello Gurl!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anthology Altar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1 class="title">Anthology Altar</h1>
+      <ul id="nav-ul">
+        <li>
+            <a class="nav-link" href="#introduction">Introduction</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="intro-section" id="introduction">
+      <div class="flex-container">
+        <div class="flex-child">
+          <header>Introduction</header>
+            <article>
+              <p>
+                This Anthology Altar was built by <a href="https://ayanazairecotton.com/">Ayana Zaire Cotton</a> inside <a href="https://www.seedaschool.com/">Seeda School</a> as a part of the Full Stack Software Engineering Module 3: Archive Altar project where learners are introduced to building API's and databases to seed with their own data of choice. In Module 3 Seeda School students also learn how to accept input data from their community of visitors. Try adding to the anthology using the form!
+              </p>
+              <p>
+                <b>NOTE:</b> Due to the formatting limitations of JSON (JavaScript Object Notation) data, line breaks in the poem are preserved but formatting like indentation may differ from the original publishing of the poem. I encourage you to check out this <a href="https://www.are.na/ayana-zaire/anthology-altar">Are.na channel</a> and click on the accompanying images below to experience the original formatting of the poem.
+              </p>
+            </article>
+        </div>
+        <div class="flex-child">
+          <header>Add to the Anthology</header>
+          <form id="poem-form">
+            <div class="form-divs">
+              <label for="title">Title</label><span><input type="text" name="title" id="title"></span>
+            </div>
+            <div class="form-divs">
+              <label for="author">Author</label><span><input type="text" name="author" id="author"></span>
+            </div>
+            <div class="form-divs">
+              <label for="poem">Poem</label><span><textarea name="poem" id="poem" cols="30" rows="10"></textarea></span>
+            </div>
+            <div class="form-divs">
+              <label for="source">Source</label><span><input type="text" name="source" id="source"></span>
+            </div>
+            <div class="form-divs">
+              <label for="book">Book</label><span><input type="text" name="book" id="book"></span>
+            </div>
+            <div class="form-divs">
+              <label for="publisher">Publisher</label><span><input type="text" name="publisher" id="publisher"></span>
+            </div>
+            <div class="form-divs">
+              <label for="year">Year</label><span><input type="number" name="year" id="year"></span>
+            </div>
+            <div class="form-divs">
+              <label for="image">Image Link</label><span><input type="text" name="image" id="image"></span>
+            </div>
+            <div class="form-divs">
+              <label for="video">YouTube URL</label><span><input type="text" name="video" id="video"></span>
+            </div>
+            <input type="submit" id="contribute-poem" value="contribute">
+          </form>
+        </div>
+      </div>
+    </section>
 
-<form action="/retreaters" method="post">
-<input type="text" name="name" id="">
-<input type="submit" name="" id="">
-</form>
+    <div id="main-doc">
+      
+    </div>
+  </body>
+</html>

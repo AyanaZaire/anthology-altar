@@ -1,0 +1,240 @@
+html,
+body {
+    background-color: #C48A47;
+    min-width: 290px;
+    color: black;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid 1px black;
+  /* filter: drop-shadow(0 0 0.75rem #7d12ff); */
+}
+
+.title {
+  color: #6BD66B;
+  font-weight: 100;
+  filter: drop-shadow(0 0 0.75rem #7d12ff);
+  margin: 10px;
+  font-size: xx-large;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+header {
+  color: #6BD66B;
+  text-align: left;
+  margin: 0px;
+  font-size: xx-large;
+  font-family: 'Cormorant Garamond', serif;
+  filter: drop-shadow(0 0 0.75rem #7d12ff);
+  border:  #6BD66B 1px solid;
+  padding: 7px 14px;
+  /* text-align: center; */
+  display: inline-block;
+  margin: 4px 0px;
+  /* cursor: pointer; */
+  border-radius: 30px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  padding: 10px 30px;
+}
+
+#navbar a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: small;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+a {
+  color: #6BD66B;
+}
+
+a:hover {
+  filter: drop-shadow(0 0 0.75rem #7d12ff);
+}
+
+#navbar p {
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: x-small;
+  text-transform: uppercase;
+}
+
+#main-doc {
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: small;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.intro-section {
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: small;
+  font-family: 'IBM Plex Mono', monospace;
+  border-bottom: 1px solid black;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-child {
+  flex: 1;
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
+
+section article {
+  color: black;
+  /* margin: 15px; */
+  font-size: 0.96em;
+  margin-bottom: 30px;
+}
+
+form {
+  margin-top: 30px;
+  position:relative;
+}
+
+label {
+  margin-bottom: 10px;
+  width: 70px;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  width: 400px;
+  border-radius: 17px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  /* filter: drop-shadow(0 0 0.40rem #7d12ff); */
+  border:#6BD66B solid 1px;
+  margin-bottom: 30px;
+}
+
+.form-divs {
+  display: flex;
+  gap: 17px;
+}
+
+.main-section {
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+}
+
+.main-section:last-of-type {
+  margin-bottom: 30px;
+  border-bottom: 0px solid black;
+}
+
+.author {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: large;
+  margin-bottom: -15px;
+}
+
+.poet-image {
+  /* float: right; */
+  margin-top: 10px;
+  width: 100%;
+  border:#6BD66B solid 1px;
+}
+
+.citation {
+  margin-top: 70px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: large;
+}
+
+.citation-text {
+  margin-top: 70px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* https://hardiquedasore.medium.com/how-to-use-a-line-break-in-json-3c27d7ee8fc6 */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/white-space */
+p {
+  white-space: pre-line;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    /* border: 1px solid; */
+    height: 200px;
+  }
+
+  #navbar {
+    background-color: #C48A47;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 1px solid;
+  }
+
+  .intro-section {
+    margin-top: 270px;
+  }
+
+  #main-doc, .intro-section {
+    position: relative;
+    margin-left: 0px;
+    /* margin-top: 270px; */
+  }
+
+  .flex-container {
+    flex-direction: row;
+  }
+
+  input, textarea {
+    margin-bottom: 10px;
+    width: 300px;
+    border-radius: 17px;
+  }
+
+  .poet-image {
+    /* float: right; */
+    margin-top: 10px;
+    width: 370px;
+    border:#6BD66B solid 1px;
+  }
+}

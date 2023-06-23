@@ -1,7 +1,8 @@
 // Boiler Plate App Set Up
 const express = require('express')
+// IMPORTANT parses JSON for POST request
 const app = express()
-const bodyParser = require('body-parser')
+app.use(express.json());
 const cors = require('cors')
 require('dotenv').config();
 
@@ -20,12 +21,14 @@ db.once("open", function () {
 });
 
 app.use(cors())
+
+// Load CSS
 app.use(express.static('public'))
 
 // Serve Static File 
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/views/index.html')
-// });
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/index.html')
+});
 
 const listener = app.listen(3000, () => {
   console.log('Your app is listening on port 3000')
@@ -33,19 +36,17 @@ const listener = app.listen(3000, () => {
 
 //Poem Model + Schema
 const PoemSchema = new mongoose.Schema({
-  title: String,
-  author: String,
-  poem: String,
-  source: String,
-  book: String,
-  publisher: String,
-  year: Number,
-  image: String,
-  video: String,
+  title: {type: String},
+  author: {type: String},
+  poem: {type: String},
+  source: {type: String},
+  book: {type: String},
+  publisher: {type: String},
+  year: {type: Number},
+  images: {type: [String]}
 });
 
 const Poem = mongoose.model("Poem", PoemSchema);
-
 
 // Read
 // https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/
@@ -64,12 +65,12 @@ app.get('/poems', async (request, response) => {
 
 // Create 
 //Quick Note on RESTful routes: https://medium.com/@shubhangirajagrawal/the-7-restful-routes-a8e84201f206
-app.post("/poems", bodyParser.urlencoded({ extended: false }), async (request, response) => {
-  console.log(request.body)
+app.post("/poems", async (request, response) => {
+  //console.log("request body", request.body)
   const poem = new Poem(request.body);
-  console.log(poem)
+  //console.log(poem)
   try {
-    await retreater.save();
+    await poem.save();
     response.send(poem);
   } catch (error) {
     response.status(500).send(error);
