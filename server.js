@@ -26,7 +26,7 @@ app.use(cors())
 app.use(express.static('public'))
 
 // Serve Static File 
-app.get('/', (req, res) => {
+app.get('https://anthology-altar-17f92dfe2b72.herokuapp.com/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html')
 });
 
