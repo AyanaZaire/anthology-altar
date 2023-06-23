@@ -3,7 +3,7 @@ const express = require('express')
 // IMPORTANT parses JSON for POST request
 const app = express()
 app.use(express.json());
-const cors = require('cors')
+//const cors = require('cors')
 require('dotenv').config();
 
 // Test URI access
@@ -20,7 +20,7 @@ db.once("open", function () {
   console.log("Connected successfully");
 });
 
-app.use(cors())
+//app.use(cors())
 
 // Load CSS
 app.use(express.static('public'))
